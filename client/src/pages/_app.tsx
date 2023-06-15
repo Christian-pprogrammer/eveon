@@ -1,6 +1,10 @@
 import '@/styles/globals.css'
+import withApollo from '@/lib/apollo'
+
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
+
+export default withApollo(App);
