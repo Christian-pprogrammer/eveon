@@ -1,9 +1,14 @@
 import React from 'react'
 import RatingStyled from './RatingStyled'
 
-const Rating = () => {
+type RatingProps = {
+  height?: string,
+  width?: string
+}
+
+const Rating = ({height, width}: RatingProps) => {
   return (
-    <RatingStyled role="img" aria-labelledby="starRating-oe600nhsj6o" viewBox="0 0 251 46" xmlns="http://www.w3.org/2000/svg">
+    <RatingStyled role="img" aria-labelledby="starRating-oe600nhsj6o" viewBox="0 0 251 46" xmlns="http://www.w3.org/2000/svg" height={height} width={width}>
       <title id="starRating-oe600nhsj6o" lang="en">4.7 out of five star rating on Trustpilot</title>
       <g className="tp-star">
           <path className="tp-star__canvas" fill="#00b57a" d="M0 46.330002h46.375586V0H0z"></path>

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Pilat Regular";
   src: url('../assets/fonts/pilat/PilatWide-Light.woff2') format('woff2'),
@@ -20,7 +24,8 @@
   --dark: #141414;
   --success: #00b57a;
   --semi-light: #f3f3f3;
-  --yellow: #ffd545
+  --yellow: #ffd545;
+  --border-color: #d0d0d0;
 }
 
 .container {
