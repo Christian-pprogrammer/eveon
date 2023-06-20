@@ -1,6 +1,12 @@
 import styled from "styled-components";
-const StorageContainerStyled = styled.div `
+
+type Props = {
+  direction?: string
+}
+
+const StorageContainerStyled = styled.div <Props> `
   background-color: var(--light);
+  display: ${(props: any)=>props.direction == 'horizontal' ? 'grid':'block'}; 
   div.product-image {
     height: 200px;
     background-position: center;
@@ -16,15 +22,14 @@ const StorageContainerStyled = styled.div `
     }
   }
   div.footer {
+    
     padding: 7%;
     h3, p {
       text-align: left;
-    }
-    h3 {
-      font-size: 1.1rem;
+
     }
     p {
-      font-size: 1rem;
+      font-size: .9rem !important;
       margin-bottom: 10px;
     }
   }

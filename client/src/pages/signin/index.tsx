@@ -1,6 +1,7 @@
 import Header from '@/components/layout/header/Header';
 import React from 'react'
 import SigninStyled from './SigninStyled';
+import Link from 'next/link';
 
 const signin = () => {
   return (
@@ -20,8 +21,12 @@ const signin = () => {
           <div className="submit">
             <input type="submit" className='submit-btn' />
             <div>
-              <p>Forgot password?</p>
-              <p>Not a member yet?</p>
+              <Link href="/create-account">
+                <p>Forgot password?</p>
+              </Link>
+              <Link href="/create-account">
+                <p>Not a member yet?</p>
+              </Link>
             </div>
           </div>
         </form>

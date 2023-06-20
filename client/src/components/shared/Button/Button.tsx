@@ -3,12 +3,13 @@ import ButtonStyled from './ButtonStyled'
 
 type BtnProps = {
   title: string,
-  style?: any
+  style?: any,
+  onClick?: ()=>any
 }
 
-const Button = ({title, style}: BtnProps) => {
+const Button = ({title, style, onClick}: BtnProps) => {
   return (
-    <ButtonStyled style={style}>
+    <ButtonStyled style={style} onClick={onClick}>
       {title}
     </ButtonStyled>
   )

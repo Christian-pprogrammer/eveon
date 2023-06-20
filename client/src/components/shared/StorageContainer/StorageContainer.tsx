@@ -8,12 +8,13 @@ type ContainerProps = {
   measure: string,
   startPrice: string,
   price: string,
-  image: string
+  image: string,
+  direction?: 'vertical'|'horizontal'
 }
 
-const StorageContainer = ({name, startPrice, price, measure, image}: ContainerProps) => {
+const StorageContainer = ({name, startPrice, price, measure, image, direction}: ContainerProps) => {
   return (
-    <StorageContainerStyled>
+    <StorageContainerStyled direction={direction}>
       <div className="product-image" style={{backgroundImage: `url(${image})`}}>
         <span className='name'>{name}</span>
       </div>

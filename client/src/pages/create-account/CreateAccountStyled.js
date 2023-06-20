@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const SigninStyled = styled.div `
+const CreateAccountStyled = styled.div `
   height: 100vh;
   background-image: url('/assets/images/signin-bg.png');
   background-size: cover;
@@ -27,19 +27,27 @@ const SigninStyled = styled.div `
       border: 1px solid var(--border-color);
       font-size: 1rem;
     }
-    input.submit-btn {
+    input.submit-btn, button.submit-btn {
       background-color: var(--primary);
       color: var(--light);
-      font-size: 1.1rem;
+      font-size: 1rem;
       border: none;
       padding: 15px 10px;
       cursor: pointer;
-      width: 60%;
+      display: inline-block;
+    }
+    &>p{
+      font-size: 17px;
+      font-weight: 400;
+      margin: 20px 0px;
+      color: #141414;
+      line-height: 25px;
     }
     div.submit {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
+      gap: 20%;
       a {
         text-decoration: none;
       }
@@ -59,4 +67,4 @@ const SigninStyled = styled.div `
   }
 `
 
-export default SigninStyled;
+export default CreateAccountStyled;

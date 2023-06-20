@@ -2,8 +2,10 @@ import React from 'react'
 import OverviewStyled from './OverviewStyled'
 import Button from '@/components/shared/Button/Button'
 import ListItem from '@/components/shared/list-item/ListItem'
+import { useRouter } from 'next/router'
 
 const Overview = () => {
+  const router = useRouter();
   return (
     <OverviewStyled>
       <div className="container">
@@ -16,7 +18,7 @@ const Overview = () => {
             Eveon's convenient online webshop provides 24/7 purchasing options, transparent pricing & fast delivery on used containers. To get started, just pick your size, enter your postal code & instantly see your price.
             </p>
           </div>
-          <Button title='Buy a container' />
+          <Button title='Buy a container' onClick={()=>router.push('containers')} style={{cursor: 'pointer'}} />
           <div className='why-choose'>
             <h4>WHY CHOOSE EVEON CONTAINERS</h4>
             <ListItem number={1} text='Guaranted stock with delivery dates customization' />
